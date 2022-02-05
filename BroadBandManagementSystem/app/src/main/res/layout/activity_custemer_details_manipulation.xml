@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustemerDetailsManipulation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary" />
+
+        <View
+            android:id="@+id/wave"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/view"
+            android:background="@drawable/wave" />
+
+        <TextView
+            android:id="@+id/customerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/ubuntubold"
+            android:text="Customer Panel"
+            android:textColor="@color/white"
+            android:textSize="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customerText"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/ubuntubold"
+            android:text="Here you can add new customer"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/customerText"
+            android:src="@drawable/loginlogo" />
+
+
+        <EditText
+            android:id="@+id/customerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:background="@drawable/round_broder"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/ubuntubold"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_below="@+id/wave"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/customerUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="UserName"
+            android:background="@drawable/round_broder"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/ubuntubold"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_below="@+id/customerName"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/customerAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customerUserName"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/round_broder"
+            android:drawableStart="@drawable/ic_baseline_home_24"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/ubuntubold"
+            android:hint="Address"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/customerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customerAddress"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/round_broder"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/ubuntubold"
+            android:hint="Email"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/customerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customerEmail"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/round_broder"
+            android:drawableStart="@drawable/ic_contact"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/ubuntubold"
+            android:hint="Phone Number"
+            android:padding="16dp" />
+
+        <Spinner
+            android:id="@+id/planSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customerPhone"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="16dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_below="@+id/planSelector"
+            android:background="@drawable/round_btn"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="20dp"/>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
