@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.broadbandmanagementsystem.databases.RegisterDB;
+
 public class MainActivity extends AppCompatActivity {
     private Intent loginIntent;
     private EditText emailField, passwordField;
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goRegisterForm(View view){
+         RegisterDB registerDB = new RegisterDB(MainActivity.this);
          loginIntent = new Intent(this,registerUser.class);
          startActivity(loginIntent);
     }

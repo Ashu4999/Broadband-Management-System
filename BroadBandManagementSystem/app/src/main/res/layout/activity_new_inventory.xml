@@ -12,18 +12,18 @@
         android:layout_height="match_parent"
         android:paddingBottom="50dp">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/colorPrimary" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary" />
 
-    <View
-        android:id="@+id/wave"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/view"
-        android:background="@drawable/wave" />
+        <View
+            android:id="@+id/wave"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/view"
+            android:background="@drawable/wave" />
 
         <TextView
             android:id="@+id/customerText"
@@ -64,38 +64,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/wave"
-            android:hint="Name"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/round_broder"
-            android:padding="16dp"
             android:drawableStart="@drawable/ic_store"
             android:drawablePadding="16dp"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="16dp"/>
+            android:hint="Name"
+            android:padding="16dp" />
 
         <EditText
             android:id="@+id/invetoryQuantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/invetoryName"
+            android:layout_below="@+id/invetoryPrice"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/round_broder"
             android:drawableStart="@drawable/ic_quantity"
             android:drawablePadding="16dp"
             android:hint="Quantity"
+            android:inputType="number"
             android:padding="16dp" />
 
         <EditText
             android:id="@+id/invetoryPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/invetoryQuantity"
+            android:layout_below="@+id/invetoryName"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/round_broder"
             android:drawableStart="@drawable/ic_money"
             android:drawablePadding="16dp"
             android:hint="Price"
+            android:inputType="numberDecimal"
             android:padding="16dp" />
 
 
@@ -103,24 +105,24 @@
             android:id="@+id/inventoryTotalAmt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/invetoryPrice"
-            android:text="Price will be here"
+            android:layout_below="@+id/invetoryQuantity"
             android:layout_marginHorizontal="40dp"
-            android:textSize="20dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/ubuntubold"
+            android:text="Price will be here"
             android:textAlignment="center"
-            android:layout_marginTop="18dp"
-            android:fontFamily="@font/ubuntubold"/>
+            android:textSize="20dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/saveInventory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/inventoryTotalAmt"
-            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="28dp"
             android:background="@drawable/round_btn"
             android:text="Save"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 </ScrollView>
