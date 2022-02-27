@@ -64,31 +64,33 @@
             android:id="@+id/customerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:layout_below="@+id/wave"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:background="@drawable/round_broder"
-            android:padding="16dp"
             android:drawableStart="@drawable/ic_user"
             android:drawablePadding="16dp"
             android:fontFamily="@font/ubuntubold"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_below="@+id/wave"
-            android:layout_marginTop="16dp"/>
+            android:hint="Name"
+            android:inputType="text"
+            android:padding="16dp" />
 
         <EditText
             android:id="@+id/customerUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="UserName"
+            android:layout_below="@+id/customerName"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:background="@drawable/round_broder"
-            android:padding="16dp"
             android:drawableStart="@drawable/ic_user"
             android:drawablePadding="16dp"
             android:fontFamily="@font/ubuntubold"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_below="@+id/customerName"
-            android:layout_marginTop="16dp"/>
+            android:hint="UserName"
+            android:inputType="text"
+            android:padding="16dp" />
 
         <EditText
             android:id="@+id/customerAddress"
@@ -103,6 +105,7 @@
             android:drawablePadding="16dp"
             android:fontFamily="@font/ubuntubold"
             android:hint="Address"
+            android:inputType="text"
             android:padding="16dp" />
 
         <EditText
@@ -118,6 +121,7 @@
             android:drawablePadding="16dp"
             android:fontFamily="@font/ubuntubold"
             android:hint="Email"
+            android:inputType="textEmailAddress"
             android:padding="16dp" />
 
         <EditText
@@ -133,6 +137,7 @@
             android:drawablePadding="16dp"
             android:fontFamily="@font/ubuntubold"
             android:hint="Phone Number"
+            android:inputType="phone"
             android:padding="16dp" />
 
         <Spinner

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BroadBandManagementSystem">
         <activity
+            android:name=".ShowInventoryData"
+            android:exported="false" />
+        <activity
             android:name=".InventoryUpdateDelete"
             android:exported="false" />
         <activity

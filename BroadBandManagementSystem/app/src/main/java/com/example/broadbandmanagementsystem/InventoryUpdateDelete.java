@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Editable;
@@ -21,7 +22,7 @@ import com.example.broadbandmanagementsystem.databases.InventoryDB;
 import java.text.DecimalFormat;
 
 public class InventoryUpdateDelete extends AppCompatActivity {
-    private Button searchRecord, updateRecord, deleteRecord;
+    private Button searchRecord, updateRecord, deleteRecord, showDataBtn;
     private EditText idField, nameField, quantityField, priceField;
     private TextView totalAmtText;
     private Double totalAmount;
@@ -35,6 +36,7 @@ public class InventoryUpdateDelete extends AppCompatActivity {
         searchRecord = findViewById(R.id.searchInventoryBtn);
         updateRecord = findViewById(R.id.updateInventoryBtn);
         deleteRecord = findViewById(R.id.deleteInventoryBtn);
+        showDataBtn = findViewById(R.id.showDataBtn);
 
         idField = findViewById(R.id.searchInventoryField);
         nameField = findViewById(R.id.invetoryName);
@@ -50,11 +52,12 @@ public class InventoryUpdateDelete extends AppCompatActivity {
                     Cursor res = inventoryDB.getDataById(Integer.parseInt(idField.getText().toString()));
 
                     if(res.getCount() == 0){
-                        Toast.makeText(InventoryUpdateDelete.this, "NO DATA FOUNT", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(InventoryUpdateDelete.this, "NO DATA FOUND", Toast.LENGTH_SHORT).show();
+                        idField.setText("");
                         nameField.setText("");
                         priceField.setText("");
                         quantityField.setText("");
-                        totalAmtText.setText("");
+                        totalAmtText.setText("Price will be here");
                         return;
                     }
 
@@ -84,10 +87,11 @@ public class InventoryUpdateDelete extends AppCompatActivity {
                          boolean checkUpdate = inventoryDB.updateData(selectedId, name, quantity, price, totalAmount);
                          if(checkUpdate){
                              Toast.makeText(InventoryUpdateDelete.this, "Data Updated", Toast.LENGTH_SHORT).show();
+                             idField.setText("");
                              nameField.setText("");
                              priceField.setText("");
                              quantityField.setText("");
-                             totalAmtText.setText("");
+                             totalAmtText.setText("Price will be here");
                         }else{
                              Toast.makeText(InventoryUpdateDelete.this, "Data Not Updated", Toast.LENGTH_SHORT).show();
                          }
@@ -118,10 +122,11 @@ public class InventoryUpdateDelete extends AppCompatActivity {
 
                                 if(checkDelete){
                                     Toast.makeText(InventoryUpdateDelete.this, "Data Deleted", Toast.LENGTH_SHORT).show();
+                                    idField.setText("");
                                     nameField.setText("");
                                     priceField.setText("");
                                     quantityField.setText("");
-                                    totalAmtText.setText("");
+                                    totalAmtText.setText("Price will be here");
                                 }else{
                                     Toast.makeText(InventoryUpdateDelete.this, "Data Not Deleted", Toast.LENGTH_SHORT).show();
                                 }
@@ -191,6 +196,12 @@ public class InventoryUpdateDelete extends AppCompatActivity {
             }
         });
 
-
+        showDataBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InventoryUpdateDelete.this, ShowInventoryData.class);
+                startActivity(intent);
+            }
+        });
     }
 }

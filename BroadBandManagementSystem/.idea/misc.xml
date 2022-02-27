@@ -31,14 +31,16 @@
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_forget_password.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_inventory_update_delete.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_new_inventory.xml" value="0.22592592592592592" />
-        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_register_user.xml" value="0.2" />
+        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_new_inventory.xml" value="0.2" />
+        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_register_user.xml" value="0.264" />
+        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_show_inventory_data.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_update_delete_customer.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/fragment_change_password.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/fragment_forget_email_input.xml" value="0.2638888888888889" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/fragment_forget_email_input_form.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/fragment_forget_enter_email.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/fragment_validate_otp.xml" value="0.22592592592592592" />
+        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/inventory_item.xml" value="0.22592592592592592" />
       </map>
     </option>
   </component>

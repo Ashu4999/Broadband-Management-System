@@ -16,7 +16,7 @@ public class InventoryDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE inventoryDB(inventoryID INTEGER PRIMARY KEY AUTOINCREMENT , iName TEXT, price DOUBLE,quantity int, totalAmount DOUBLE)");
+        db.execSQL("CREATE TABLE inventoryDB(_id INTEGER PRIMARY KEY AUTOINCREMENT , iName TEXT, price DOUBLE,quantity int, totalAmount DOUBLE)");
 //        db.execSQL("DROP TABLE inventoryDB");
 //        Log.d("test","Table Deleted");
     }
@@ -26,7 +26,7 @@ public class InventoryDB extends SQLiteOpenHelper {
 
     }
 
-    public void insertData(String name, int quantity,double price, double totalAmount){
+    public boolean insertData(String name, int quantity,double price, double totalAmount){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -35,12 +35,17 @@ public class InventoryDB extends SQLiteOpenHelper {
         values.put("quantity",quantity);
         values.put("totalAmount",totalAmount);
 
-        db.insert("inventoryDB",null, values);
+        long result = db.insert("inventoryDB",null, values);
         Log.d("test","Data inserted");
         db.close();
+
+        if(result == -1)
+            return false;
+        else
+            return true;
     }
 
-    public boolean updateData(int inventoryId, String name, int quantity,double price, double totalAmount){
+    public boolean updateData(int _id, String name, int quantity,double price, double totalAmount){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -49,10 +54,10 @@ public class InventoryDB extends SQLiteOpenHelper {
         values.put("quantity",quantity);
         values.put("totalAmount",totalAmount);
 
-        Cursor cursor = db.rawQuery("Select * from inventoryDB where inventoryID = ?", new String[] {String.valueOf(inventoryId)});
+        Cursor cursor = db.rawQuery("Select * from inventoryDB where _id = ?", new String[] {String.valueOf(_id)});
 
         if(cursor.getCount() > 0){
-            long result = db.update("inventoryDB", values, "inventoryID=?", new String[] {String.valueOf(inventoryId)});
+            long result = db.update("inventoryDB", values, "_id=?", new String[] {String.valueOf(_id)});
             if(result == -1){
                 return false;
             }else{
@@ -63,13 +68,13 @@ public class InventoryDB extends SQLiteOpenHelper {
         }
     }
 
-    public Boolean deleteData(int inventoryId){
+    public Boolean deleteData(int _id){
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor cursor = db.rawQuery("Select * from inventoryDB where inventoryID = ?", new String[] {String.valueOf(inventoryId)});
+        Cursor cursor = db.rawQuery("Select * from inventoryDB where _id = ?", new String[] {String.valueOf(_id)});
 
         if(cursor.getCount() > 0){
-            long result = db.delete("inventoryDB",  "inventoryID=?", new String[] {String.valueOf(inventoryId)});
+            long result = db.delete("inventoryDB",  "_id=?", new String[] {String.valueOf(_id)});
             if(result == -1){
                 return false;
             }else{
@@ -83,10 +88,17 @@ public class InventoryDB extends SQLiteOpenHelper {
     public Cursor getDataById(int  id){
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor cursor = db.rawQuery("select * from inventoryDB where inventoryID ="+id,null);
+        Cursor cursor = db.rawQuery("select * from inventoryDB where _id ="+id,null);
         cursor.moveToFirst();
         return cursor;
     }
 
+//    public Cursor getAllData(){
+//        SQLiteDatabase db = this.getWritableDatabase();
+//
+//        Cursor cursor = db.rawQuery("select * from inventoryDB",null);
+//        cursor.moveToFirst();
+//        return cursor;
+//    }
 
 }

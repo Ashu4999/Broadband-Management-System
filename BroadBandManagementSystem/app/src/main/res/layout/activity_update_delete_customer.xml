@@ -195,12 +195,12 @@
             android:id="@+id/deleteBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Delete"
             android:layout_below="@+id/updateBtn"
-            android:background="@drawable/round_btn"
-            android:textColor="@color/white"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_btn"
+            android:text="Delete"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 </ScrollView>

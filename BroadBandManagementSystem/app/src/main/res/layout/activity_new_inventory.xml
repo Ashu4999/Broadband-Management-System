@@ -59,53 +59,96 @@
             android:layout_toRightOf="@+id/customerText"
             android:src="@drawable/invertory3" />
 
-        <EditText
-            android:id="@+id/invetoryName"
+        <LinearLayout
+            android:id="@+id/fieldContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/wave"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/round_broder"
-            android:drawableStart="@drawable/ic_store"
-            android:drawablePadding="16dp"
-            android:hint="Name"
-            android:padding="16dp" />
+            android:layout_below="@id/wave"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/invetoryQuantity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/invetoryPrice"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/round_broder"
-            android:drawableStart="@drawable/ic_quantity"
-            android:drawablePadding="16dp"
-            android:hint="Quantity"
-            android:inputType="number"
-            android:padding="16dp" />
+            <EditText
+                android:id="@+id/invetoryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_broder"
+                android:drawableStart="@drawable/ic_store"
+                android:drawablePadding="16dp"
+                android:hint="Name"
+                android:inputType="text"
+                android:padding="16dp" />
 
-        <EditText
-            android:id="@+id/invetoryPrice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/invetoryName"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/round_broder"
-            android:drawableStart="@drawable/ic_money"
-            android:drawablePadding="16dp"
-            android:hint="Price"
-            android:inputType="numberDecimal"
-            android:padding="16dp" />
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:paddingHorizontal="20dp"
+                android:text="validation here"
+                android:fontFamily="@font/ubuntubold"
+                android:paddingTop="5dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"/>
 
+            <EditText
+                android:id="@+id/invetoryPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_broder"
+                android:drawableStart="@drawable/ic_money"
+                android:drawablePadding="16dp"
+                android:hint="Price"
+                android:inputType="numberDecimal"
+                android:padding="16dp" />
+
+            <TextView
+                android:id="@+id/priceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:paddingHorizontal="20dp"
+                android:text="validation here"
+                android:fontFamily="@font/ubuntubold"
+                android:paddingTop="5dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/invetoryQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_broder"
+                android:drawableStart="@drawable/ic_quantity"
+                android:drawablePadding="16dp"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:padding="16dp" />
+
+            <TextView
+                android:id="@+id/quntityText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:paddingHorizontal="20dp"
+                android:text="validation here"
+                android:fontFamily="@font/ubuntubold"
+                android:paddingTop="5dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"/>
+
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/inventoryTotalAmt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/invetoryQuantity"
+            android:layout_below="@+id/fieldContainer"
             android:layout_marginHorizontal="40dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/ubuntubold"
