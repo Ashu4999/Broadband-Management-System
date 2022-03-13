@@ -76,11 +76,24 @@
             android:inputType="text"
             android:padding="16dp" />
 
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerName"
+            android:gravity="center_vertical"/>
+
         <EditText
             android:id="@+id/customerUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/customerName"
+            android:layout_below="@+id/nameText"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
@@ -92,11 +105,24 @@
             android:inputType="text"
             android:padding="16dp" />
 
+        <TextView
+            android:id="@+id/usernameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerUserName"
+            android:gravity="center_vertical" />
+
         <EditText
             android:id="@+id/customerAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/customerUserName"
+            android:layout_below="@+id/usernameText"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
@@ -108,11 +134,24 @@
             android:inputType="text"
             android:padding="16dp" />
 
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerAddress"
+            android:gravity="center_vertical" />
+
         <EditText
             android:id="@+id/customerEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/customerAddress"
+            android:layout_below="@+id/addressText"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
@@ -124,11 +163,24 @@
             android:inputType="textEmailAddress"
             android:padding="16dp" />
 
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerEmail"
+            android:gravity="center_vertical" />
+
         <EditText
             android:id="@+id/customerPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/customerEmail"
+            android:layout_below="@+id/emailText"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
@@ -140,23 +192,60 @@
             android:inputType="phone"
             android:padding="16dp" />
 
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerPhone"
+            android:gravity="center_vertical" />
+
         <Spinner
             android:id="@+id/planSelector"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/customerPhone"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="26dp" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <TextView
+            android:id="@+id/planText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save"
-            android:layout_below="@+id/planSelector"
-            android:background="@drawable/round_btn"
-            android:textColor="@color/white"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="20dp"/>
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:visibility="gone"
+            android:layout_below="@+id/planSelector"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/selectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/planText"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntubold"
+            android:onClick="getDate"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectDate"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/round_btn"
+            android:text="Save"
+            android:textColor="@color/white" />
 
 
     </RelativeLayout>

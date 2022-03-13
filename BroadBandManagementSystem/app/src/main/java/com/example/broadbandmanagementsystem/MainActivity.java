@@ -3,7 +3,6 @@ package com.example.broadbandmanagementsystem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,12 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.broadbandmanagementsystem.databases.LoginDB;
-import com.example.broadbandmanagementsystem.databases.RegisterDB;
-
-import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
     private Intent loginIntent;
@@ -101,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goRegisterForm(View view){
-         RegisterDB registerDB = new RegisterDB(MainActivity.this);
+//         RegisterDB registerDB = new RegisterDB(MainActivity.this);
          loginIntent = new Intent(this,registerUser.class);
          startActivity(loginIntent);
     }

@@ -72,54 +72,94 @@
             android:drawablePadding="16dp"
             android:fontFamily="@font/ubuntubold"
             android:hint="Id or Username"
+            android:inputType="number"
             android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/idText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/searchField"
+            android:gravity="center_vertical"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/searchBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/searchField"
-            android:text="Search"
-            android:background="@drawable/round_btn"
+            android:layout_below="@+id/idText"
             android:layout_marginHorizontal="32dp"
-            android:textColor="@color/white"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_btn"
+            android:text="Search"
+            android:textColor="@color/white" />
 
         <EditText
             android:id="@+id/customerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:layout_below="@+id/searchBtn"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
             android:background="@drawable/round_broder"
-            android:padding="16dp"
             android:drawableStart="@drawable/ic_user"
             android:drawablePadding="16dp"
             android:fontFamily="@font/ubuntubold"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_below="@+id/searchBtn"
-            android:layout_marginTop="32dp"/>
+            android:hint="Name"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerName"
+            android:gravity="center_vertical"/>
 
         <EditText
             android:id="@+id/customerUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="UserName"
+            android:layout_below="@+id/nameText"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:background="@drawable/round_broder"
-            android:padding="16dp"
             android:drawableStart="@drawable/ic_user"
             android:drawablePadding="16dp"
             android:fontFamily="@font/ubuntubold"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_below="@+id/customerName"
-            android:layout_marginTop="16dp"/>
+            android:hint="UserName"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/usernameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerUserName"
+            android:gravity="center_vertical"/>
 
         <EditText
             android:id="@+id/customerAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/customerUserName"
+            android:layout_below="@+id/usernameText"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
@@ -130,11 +170,24 @@
             android:hint="Address"
             android:padding="16dp" />
 
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerAddress"
+            android:gravity="center_vertical"/>
+
         <EditText
             android:id="@+id/customerEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/customerAddress"
+            android:layout_below="@+id/addressText"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
@@ -145,11 +198,24 @@
             android:hint="Email"
             android:padding="16dp" />
 
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerEmail"
+            android:gravity="center_vertical"/>
+
         <EditText
             android:id="@+id/customerPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/customerEmail"
+            android:layout_below="@+id/emailText"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
@@ -160,11 +226,25 @@
             android:hint="Phone Number"
             android:padding="16dp" />
 
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:paddingHorizontal="20dp"
+            android:text="validation here"
+            android:fontFamily="@font/ubuntubold"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/customerPhone"
+            android:gravity="center_vertical"/>
+
         <TextView
             android:id="@+id/currentPlan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/customerPhone"
+            android:layout_below="@+id/phoneText"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="18dp"
             android:fontFamily="@font/ubuntubold"
@@ -178,13 +258,21 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/currentPlan"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp" />
+
+        <CalendarView
+            android:id="@+id/calendarView2"
+            android:layout_width="match_parent"
+            android:layout_height="284dp"
+            android:layout_below="@+id/planSelector"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="20dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/updateBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/planSelector"
+            android:layout_below="@+id/calendarView2"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/round_btn"
@@ -201,6 +289,20 @@
             android:background="@drawable/round_btn"
             android:text="Delete"
             android:textColor="@color/white" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginBottom="253dp"
+            android:text="Switch" />
+
+
 
     </RelativeLayout>
 </ScrollView>

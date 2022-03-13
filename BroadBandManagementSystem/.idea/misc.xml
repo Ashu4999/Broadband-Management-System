@@ -24,6 +24,8 @@
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/drawable/round_broder.xml" value="0.2703125" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/drawable/round_btn.xml" value="0.2703125" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/drawable/wave.xml" value="0.2703125" />
+        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_calender.xml" value="0.21342592592592594" />
+        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_calender_view.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_change_password.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_custemer_details_manipulation.xml" value="0.264" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_dashborad.xml" value="0.264" />
@@ -34,7 +36,7 @@
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_new_inventory.xml" value="0.2" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_register_user.xml" value="0.264" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_show_inventory_data.xml" value="0.22592592592592592" />
-        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_update_delete_customer.xml" value="0.22592592592592592" />
+        <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/activity_update_delete_customer.xml" value="0.264" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/fragment_change_password.xml" value="0.22592592592592592" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/fragment_forget_email_input.xml" value="0.2638888888888889" />
         <entry key="..\:/Projects/Academic Project/BroadBandManagementSystem/app/src/main/res/layout/fragment_forget_email_input_form.xml" value="0.22592592592592592" />
